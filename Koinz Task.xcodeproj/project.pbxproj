@@ -8,22 +8,60 @@
 
 /* Begin PBXBuildFile section */
 		52DF017E2A6167EF007C04BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF017D2A6167EF007C04BD /* AppDelegate.swift */; };
-		52DF01802A6167EF007C04BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF017F2A6167EF007C04BD /* SceneDelegate.swift */; };
-		52DF01822A6167EF007C04BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01812A6167EF007C04BD /* ViewController.swift */; };
-		52DF01852A6167EF007C04BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01832A6167EF007C04BD /* Main.storyboard */; };
 		52DF01872A6167F0007C04BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01862A6167F0007C04BD /* Assets.xcassets */; };
 		52DF018A2A6167F0007C04BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01882A6167F0007C04BD /* LaunchScreen.storyboard */; };
+		52DF01972A616994007C04BD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01962A616994007C04BD /* AppCoordinator.swift */; };
+		52DF019F2A616C56007C04BD /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF019E2A616C56007C04BD /* HomeRepository.swift */; };
+		52DF01A12A616CD4007C04BD /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01A02A616CD4007C04BD /* NetworkRequest.swift */; };
+		52DF01A42A616CFF007C04BD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 52DF01A32A616CFF007C04BD /* Alamofire */; };
+		52DF01A72A616D0D007C04BD /* AlamofireEasyLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 52DF01A62A616D0D007C04BD /* AlamofireEasyLogger */; };
+		52DF01A92A616D2A007C04BD /* JsonEncadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01A82A616D2A007C04BD /* JsonEncadable.swift */; };
+		52DF01AB2A616D39007C04BD /* RequestEncodingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01AA2A616D39007C04BD /* RequestEncodingType.swift */; };
+		52DF01AD2A616D4D007C04BD /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01AC2A616D4D007C04BD /* AppError.swift */; };
+		52DF01AF2A616D8A007C04BD /* MakeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01AE2A616D8A007C04BD /* MakeRequest.swift */; };
+		52DF01B12A616DAE007C04BD /* RequestUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01B02A616DAE007C04BD /* RequestUrl.swift */; };
+		52DF01B32A616DBD007C04BD /* AppRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01B22A616DBD007C04BD /* AppRequestInterceptor.swift */; };
+		52DF01B52A616DF7007C04BD /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01B42A616DF7007C04BD /* RequestMethod.swift */; };
+		52DF01B72A616E95007C04BD /* NetworkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01B62A616E95007C04BD /* NetworkState.swift */; };
+		52DF01BB2A616F4D007C04BD /* AppURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01BA2A616F4D007C04BD /* AppURLRequest.swift */; };
+		52DF01BD2A617066007C04BD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01BC2A617066007C04BD /* Constants.swift */; };
+		52DF01BF2A617238007C04BD /* PhotosListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01BE2A617238007C04BD /* PhotosListResponse.swift */; };
+		52DF01C32A61D0C0007C04BD /* HomeRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01C22A61D0C0007C04BD /* HomeRepositoryImp.swift */; };
+		52DF01C62A61D162007C04BD /* MoviesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01C52A61D162007C04BD /* MoviesDataSource.swift */; };
+		52DF01CA2A61D294007C04BD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01C82A61D294007C04BD /* HomeViewController.swift */; };
+		52DF01CB2A61D294007C04BD /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01C92A61D294007C04BD /* HomeViewController.xib */; };
+		52DF01CD2A61D621007C04BD /* ImageListBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01CC2A61D621007C04BD /* ImageListBody.swift */; };
+		52DF01D02A61D696007C04BD /* Publisher+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01CF2A61D696007C04BD /* Publisher+.swift */; };
+		52DF01D42A61D7BB007C04BD /* HomeResponseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01D32A61D7BB007C04BD /* HomeResponseStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		52DF017A2A6167EF007C04BD /* Koinz Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Koinz Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DF017D2A6167EF007C04BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52DF017F2A6167EF007C04BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		52DF01812A6167EF007C04BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		52DF01842A6167EF007C04BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52DF01862A6167F0007C04BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52DF01892A6167F0007C04BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52DF018B2A6167F0007C04BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52DF01962A616994007C04BD /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		52DF019E2A616C56007C04BD /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		52DF01A02A616CD4007C04BD /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		52DF01A82A616D2A007C04BD /* JsonEncadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonEncadable.swift; sourceTree = "<group>"; };
+		52DF01AA2A616D39007C04BD /* RequestEncodingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEncodingType.swift; sourceTree = "<group>"; };
+		52DF01AC2A616D4D007C04BD /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		52DF01AE2A616D8A007C04BD /* MakeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRequest.swift; sourceTree = "<group>"; };
+		52DF01B02A616DAE007C04BD /* RequestUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUrl.swift; sourceTree = "<group>"; };
+		52DF01B22A616DBD007C04BD /* AppRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRequestInterceptor.swift; sourceTree = "<group>"; };
+		52DF01B42A616DF7007C04BD /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		52DF01B62A616E95007C04BD /* NetworkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkState.swift; sourceTree = "<group>"; };
+		52DF01BA2A616F4D007C04BD /* AppURLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppURLRequest.swift; sourceTree = "<group>"; };
+		52DF01BC2A617066007C04BD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		52DF01BE2A617238007C04BD /* PhotosListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListResponse.swift; sourceTree = "<group>"; };
+		52DF01C22A61D0C0007C04BD /* HomeRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositoryImp.swift; sourceTree = "<group>"; };
+		52DF01C52A61D162007C04BD /* MoviesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDataSource.swift; sourceTree = "<group>"; };
+		52DF01C82A61D294007C04BD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		52DF01C92A61D294007C04BD /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		52DF01CC2A61D621007C04BD /* ImageListBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListBody.swift; sourceTree = "<group>"; };
+		52DF01CF2A61D696007C04BD /* Publisher+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+.swift"; sourceTree = "<group>"; };
+		52DF01D32A61D7BB007C04BD /* HomeResponseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponseStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52DF01A42A616CFF007C04BD /* Alamofire in Frameworks */,
+				52DF01A72A616D0D007C04BD /* AlamofireEasyLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +96,169 @@
 		52DF017C2A6167EF007C04BD /* Koinz Task */ = {
 			isa = PBXGroup;
 			children = (
-				52DF017D2A6167EF007C04BD /* AppDelegate.swift */,
-				52DF017F2A6167EF007C04BD /* SceneDelegate.swift */,
-				52DF01812A6167EF007C04BD /* ViewController.swift */,
-				52DF01832A6167EF007C04BD /* Main.storyboard */,
-				52DF01862A6167F0007C04BD /* Assets.xcassets */,
-				52DF01882A6167F0007C04BD /* LaunchScreen.storyboard */,
-				52DF018B2A6167F0007C04BD /* Info.plist */,
+				52DF01CE2A61D68C007C04BD /* Extensions */,
+				52DF01C02A61D0AA007C04BD /* Data */,
+				52DF019A2A616C04007C04BD /* Infrastructure */,
+				52DF01982A616B59007C04BD /* Domain */,
+				52DF01952A6168D6007C04BD /* Config */,
+				52DF01942A6168C5007C04BD /* Application */,
+				52DF01922A6168B0007C04BD /* Presention */,
+				52DF01912A616894007C04BD /* Resources */,
 			);
 			path = "Koinz Task";
+			sourceTree = "<group>";
+		};
+		52DF01912A616894007C04BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52DF01862A6167F0007C04BD /* Assets.xcassets */,
+				52DF01882A6167F0007C04BD /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		52DF01922A6168B0007C04BD /* Presention */ = {
+			isa = PBXGroup;
+			children = (
+				52DF01932A6168B7007C04BD /* Home */,
+			);
+			path = Presention;
+			sourceTree = "<group>";
+		};
+		52DF01932A6168B7007C04BD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				52DF01C82A61D294007C04BD /* HomeViewController.swift */,
+				52DF01C92A61D294007C04BD /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		52DF01942A6168C5007C04BD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				52DF017D2A6167EF007C04BD /* AppDelegate.swift */,
+				52DF01962A616994007C04BD /* AppCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		52DF01952A6168D6007C04BD /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				52DF018B2A6167F0007C04BD /* Info.plist */,
+				52DF01BC2A617066007C04BD /* Constants.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		52DF01982A616B59007C04BD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				52DF019D2A616C37007C04BD /* Repository */,
+				52DF019C2A616C28007C04BD /* UseCases */,
+				52DF01992A616B5D007C04BD /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		52DF01992A616B5D007C04BD /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				52DF01BE2A617238007C04BD /* PhotosListResponse.swift */,
+				52DF01CC2A61D621007C04BD /* ImageListBody.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		52DF019A2A616C04007C04BD /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				52DF019B2A616C0C007C04BD /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		52DF019B2A616C0C007C04BD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				52DF01A02A616CD4007C04BD /* NetworkRequest.swift */,
+				52DF01A82A616D2A007C04BD /* JsonEncadable.swift */,
+				52DF01AA2A616D39007C04BD /* RequestEncodingType.swift */,
+				52DF01AC2A616D4D007C04BD /* AppError.swift */,
+				52DF01AE2A616D8A007C04BD /* MakeRequest.swift */,
+				52DF01B02A616DAE007C04BD /* RequestUrl.swift */,
+				52DF01B22A616DBD007C04BD /* AppRequestInterceptor.swift */,
+				52DF01B42A616DF7007C04BD /* RequestMethod.swift */,
+				52DF01B62A616E95007C04BD /* NetworkState.swift */,
+				52DF01BA2A616F4D007C04BD /* AppURLRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		52DF019C2A616C28007C04BD /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		52DF019D2A616C37007C04BD /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				52DF019E2A616C56007C04BD /* HomeRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		52DF01C02A61D0AA007C04BD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				52DF01D12A61D772007C04BD /* Storage */,
+				52DF01C42A61D129007C04BD /* DataSource */,
+				52DF01C12A61D0B4007C04BD /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		52DF01C12A61D0B4007C04BD /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				52DF01C22A61D0C0007C04BD /* HomeRepositoryImp.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		52DF01C42A61D129007C04BD /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				52DF01C52A61D162007C04BD /* MoviesDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		52DF01CE2A61D68C007C04BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52DF01CF2A61D696007C04BD /* Publisher+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52DF01D12A61D772007C04BD /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				52DF01D22A61D7A7007C04BD /* HomeResponseStorage */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		52DF01D22A61D7A7007C04BD /* HomeResponseStorage */ = {
+			isa = PBXGroup;
+			children = (
+				52DF01D32A61D7BB007C04BD /* HomeResponseStorage.swift */,
+			);
+			path = HomeResponseStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +277,10 @@
 			dependencies = (
 			);
 			name = "Koinz Task";
+			packageProductDependencies = (
+				52DF01A32A616CFF007C04BD /* Alamofire */,
+				52DF01A62A616D0D007C04BD /* AlamofireEasyLogger */,
+			);
 			productName = "Koinz Task";
 			productReference = 52DF017A2A6167EF007C04BD /* Koinz Task.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +309,10 @@
 				Base,
 			);
 			mainGroup = 52DF01712A6167EF007C04BD;
+			packageReferences = (
+				52DF01A22A616CFF007C04BD /* XCRemoteSwiftPackageReference "Alamofire" */,
+				52DF01A52A616D0D007C04BD /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */,
+			);
 			productRefGroup = 52DF017B2A6167EF007C04BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +329,7 @@
 			files = (
 				52DF018A2A6167F0007C04BD /* LaunchScreen.storyboard in Resources */,
 				52DF01872A6167F0007C04BD /* Assets.xcassets in Resources */,
-				52DF01852A6167EF007C04BD /* Main.storyboard in Resources */,
+				52DF01CB2A61D294007C04BD /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +340,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52DF01822A6167EF007C04BD /* ViewController.swift in Sources */,
+				52DF01D02A61D696007C04BD /* Publisher+.swift in Sources */,
+				52DF01B72A616E95007C04BD /* NetworkState.swift in Sources */,
+				52DF01972A616994007C04BD /* AppCoordinator.swift in Sources */,
+				52DF01A92A616D2A007C04BD /* JsonEncadable.swift in Sources */,
+				52DF01AB2A616D39007C04BD /* RequestEncodingType.swift in Sources */,
+				52DF01AF2A616D8A007C04BD /* MakeRequest.swift in Sources */,
+				52DF01CA2A61D294007C04BD /* HomeViewController.swift in Sources */,
+				52DF01BD2A617066007C04BD /* Constants.swift in Sources */,
+				52DF01B12A616DAE007C04BD /* RequestUrl.swift in Sources */,
+				52DF01B52A616DF7007C04BD /* RequestMethod.swift in Sources */,
+				52DF01BB2A616F4D007C04BD /* AppURLRequest.swift in Sources */,
+				52DF01C62A61D162007C04BD /* MoviesDataSource.swift in Sources */,
+				52DF019F2A616C56007C04BD /* HomeRepository.swift in Sources */,
+				52DF01A12A616CD4007C04BD /* NetworkRequest.swift in Sources */,
+				52DF01BF2A617238007C04BD /* PhotosListResponse.swift in Sources */,
+				52DF01AD2A616D4D007C04BD /* AppError.swift in Sources */,
+				52DF01C32A61D0C0007C04BD /* HomeRepositoryImp.swift in Sources */,
+				52DF01D42A61D7BB007C04BD /* HomeResponseStorage.swift in Sources */,
 				52DF017E2A6167EF007C04BD /* AppDelegate.swift in Sources */,
-				52DF01802A6167EF007C04BD /* SceneDelegate.swift in Sources */,
+				52DF01B32A616DBD007C04BD /* AppRequestInterceptor.swift in Sources */,
+				52DF01CD2A61D621007C04BD /* ImageListBody.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		52DF01832A6167EF007C04BD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				52DF01842A6167EF007C04BD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		52DF01882A6167F0007C04BD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,12 +501,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6Z5X4XX28B;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Koinz Task/Info.plist";
+				INFOPLIST_FILE = "Koinz Task/Config/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +514,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Koinz-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +532,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6Z5X4XX28B;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Koinz Task/Info.plist";
+				INFOPLIST_FILE = "Koinz Task/Config/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +545,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Koinz-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +576,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		52DF01A22A616CFF007C04BD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		52DF01A52A616D0D007C04BD /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jankaltoun/AlamofireEasyLogger";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52DF01A32A616CFF007C04BD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52DF01A22A616CFF007C04BD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		52DF01A62A616D0D007C04BD /* AlamofireEasyLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52DF01A52A616D0D007C04BD /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */;
+			productName = AlamofireEasyLogger;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52DF01722A6167EF007C04BD /* Project object */;
 }
