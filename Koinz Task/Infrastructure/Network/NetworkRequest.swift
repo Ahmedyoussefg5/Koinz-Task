@@ -6,34 +6,20 @@
 //
 
 import Foundation
-import Alamofire
-import Combine
-
-typealias RequestPublisher<T: Codable> = AnyPublisher<NetworkState<T>, Never>
 
 protocol Network<T>: AnyObject {
     associatedtype T: Codable
-    var request: RequestReusable { get }
-    func asPublisher() -> RequestPublisher<T>
+    func execute() async -> NetworkState<T>
     func withBody(_ body: JsonEncadable?) -> Self
 }
 
 class NetworkRequest<T: Codable>: Network {
     
     var request: RequestReusable
-    
-    private lazy var interceptor = AppRequestInterceptor()
-        
+            
     init(request: RequestReusable) {
         self.request = request
     }
-    
-    private lazy var sessionManager: Session = {
-        let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForResource = 60
-        configuration.timeoutIntervalForRequest = 60
-        return Session(configuration: configuration, interceptor: interceptor)
-    }()
     
     func withBody(_ body: JsonEncadable?) -> Self {
         request.body = body
@@ -41,11 +27,13 @@ class NetworkRequest<T: Codable>: Network {
     }
     
     @discardableResult
-    func asPublisher() -> RequestPublisher<T> {
-        sessionManager
-            .request(request)
-            .publishDecodable()
-            .map({ NetworkState($0) })
-            .eraseToAnyPublisher()
+    func execute() async -> NetworkState<T> {
+        do {
+            let (data, _) = try await URLSession.shared.data(for: try! request.asURLRequest())
+            let model = try JSONDecoder().decode (T.self, from: data)
+            return .success(model)
+        } catch {
+            return .fail(AppNetworkError.networkError)
+        }
     }
 }

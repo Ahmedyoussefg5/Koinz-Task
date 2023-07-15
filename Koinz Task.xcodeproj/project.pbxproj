@@ -16,23 +16,21 @@
 		52D3006E2A62A91C002D8279 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D3006C2A62A91C002D8279 /* ImageTableViewCell.xib */; };
 		52D300712A62A95C002D8279 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 52D300702A62A95C002D8279 /* SDWebImage */; };
 		52D300732A62A98E002D8279 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300722A62A98D002D8279 /* UIImageView+.swift */; };
+		52D300752A62BC42002D8279 /* AppURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300742A62BC42002D8279 /* AppURLRequest.swift */; };
+		52D300782A62BD16002D8279 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 52D300772A62BD16002D8279 /* Alamofire */; };
+		52D3007A2A62BD32002D8279 /* RequestEncodingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300792A62BD32002D8279 /* RequestEncodingType.swift */; };
 		52DF017E2A6167EF007C04BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF017D2A6167EF007C04BD /* AppDelegate.swift */; };
 		52DF01872A6167F0007C04BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01862A6167F0007C04BD /* Assets.xcassets */; };
 		52DF018A2A6167F0007C04BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01882A6167F0007C04BD /* LaunchScreen.storyboard */; };
 		52DF01972A616994007C04BD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01962A616994007C04BD /* AppCoordinator.swift */; };
 		52DF019F2A616C56007C04BD /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF019E2A616C56007C04BD /* HomeRepository.swift */; };
 		52DF01A12A616CD4007C04BD /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01A02A616CD4007C04BD /* NetworkRequest.swift */; };
-		52DF01A42A616CFF007C04BD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 52DF01A32A616CFF007C04BD /* Alamofire */; };
-		52DF01A72A616D0D007C04BD /* AlamofireEasyLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 52DF01A62A616D0D007C04BD /* AlamofireEasyLogger */; };
 		52DF01A92A616D2A007C04BD /* JsonEncadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01A82A616D2A007C04BD /* JsonEncadable.swift */; };
-		52DF01AB2A616D39007C04BD /* RequestEncodingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01AA2A616D39007C04BD /* RequestEncodingType.swift */; };
 		52DF01AD2A616D4D007C04BD /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01AC2A616D4D007C04BD /* AppError.swift */; };
 		52DF01AF2A616D8A007C04BD /* MakeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01AE2A616D8A007C04BD /* MakeRequest.swift */; };
 		52DF01B12A616DAE007C04BD /* RequestUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01B02A616DAE007C04BD /* RequestUrl.swift */; };
-		52DF01B32A616DBD007C04BD /* AppRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01B22A616DBD007C04BD /* AppRequestInterceptor.swift */; };
 		52DF01B52A616DF7007C04BD /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01B42A616DF7007C04BD /* RequestMethod.swift */; };
 		52DF01B72A616E95007C04BD /* NetworkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01B62A616E95007C04BD /* NetworkState.swift */; };
-		52DF01BB2A616F4D007C04BD /* AppURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01BA2A616F4D007C04BD /* AppURLRequest.swift */; };
 		52DF01BD2A617066007C04BD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01BC2A617066007C04BD /* Constants.swift */; };
 		52DF01BF2A617238007C04BD /* PhotosListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01BE2A617238007C04BD /* PhotosListResponse.swift */; };
 		52DF01C32A61D0C0007C04BD /* HomeRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF01C22A61D0C0007C04BD /* HomeRepositoryImp.swift */; };
@@ -52,6 +50,8 @@
 		52D3006B2A62A91C002D8279 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		52D3006C2A62A91C002D8279 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		52D300722A62A98D002D8279 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		52D300742A62BC42002D8279 /* AppURLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppURLRequest.swift; sourceTree = "<group>"; };
+		52D300792A62BD32002D8279 /* RequestEncodingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestEncodingType.swift; sourceTree = "<group>"; };
 		52DF017A2A6167EF007C04BD /* Koinz Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Koinz Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DF017D2A6167EF007C04BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DF01862A6167F0007C04BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,14 +61,11 @@
 		52DF019E2A616C56007C04BD /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		52DF01A02A616CD4007C04BD /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		52DF01A82A616D2A007C04BD /* JsonEncadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonEncadable.swift; sourceTree = "<group>"; };
-		52DF01AA2A616D39007C04BD /* RequestEncodingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEncodingType.swift; sourceTree = "<group>"; };
 		52DF01AC2A616D4D007C04BD /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		52DF01AE2A616D8A007C04BD /* MakeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRequest.swift; sourceTree = "<group>"; };
 		52DF01B02A616DAE007C04BD /* RequestUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUrl.swift; sourceTree = "<group>"; };
-		52DF01B22A616DBD007C04BD /* AppRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRequestInterceptor.swift; sourceTree = "<group>"; };
 		52DF01B42A616DF7007C04BD /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		52DF01B62A616E95007C04BD /* NetworkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkState.swift; sourceTree = "<group>"; };
-		52DF01BA2A616F4D007C04BD /* AppURLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppURLRequest.swift; sourceTree = "<group>"; };
 		52DF01BC2A617066007C04BD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		52DF01BE2A617238007C04BD /* PhotosListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListResponse.swift; sourceTree = "<group>"; };
 		52DF01C22A61D0C0007C04BD /* HomeRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositoryImp.swift; sourceTree = "<group>"; };
@@ -85,8 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52DF01A42A616CFF007C04BD /* Alamofire in Frameworks */,
-				52DF01A72A616D0D007C04BD /* AlamofireEasyLogger in Frameworks */,
+				52D300782A62BD16002D8279 /* Alamofire in Frameworks */,
 				52D300712A62A95C002D8279 /* SDWebImage in Frameworks */,
 				52D300692A62A7FF002D8279 /* NVActivityIndicatorView in Frameworks */,
 			);
@@ -223,14 +219,13 @@
 			children = (
 				52DF01A02A616CD4007C04BD /* NetworkRequest.swift */,
 				52DF01A82A616D2A007C04BD /* JsonEncadable.swift */,
-				52DF01AA2A616D39007C04BD /* RequestEncodingType.swift */,
+				52D300742A62BC42002D8279 /* AppURLRequest.swift */,
 				52DF01AC2A616D4D007C04BD /* AppError.swift */,
+				52D300792A62BD32002D8279 /* RequestEncodingType.swift */,
 				52DF01AE2A616D8A007C04BD /* MakeRequest.swift */,
 				52DF01B02A616DAE007C04BD /* RequestUrl.swift */,
-				52DF01B22A616DBD007C04BD /* AppRequestInterceptor.swift */,
 				52DF01B42A616DF7007C04BD /* RequestMethod.swift */,
 				52DF01B62A616E95007C04BD /* NetworkState.swift */,
-				52DF01BA2A616F4D007C04BD /* AppURLRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -319,10 +314,9 @@
 			);
 			name = "Koinz Task";
 			packageProductDependencies = (
-				52DF01A32A616CFF007C04BD /* Alamofire */,
-				52DF01A62A616D0D007C04BD /* AlamofireEasyLogger */,
 				52D300682A62A7FF002D8279 /* NVActivityIndicatorView */,
 				52D300702A62A95C002D8279 /* SDWebImage */,
+				52D300772A62BD16002D8279 /* Alamofire */,
 			);
 			productName = "Koinz Task";
 			productReference = 52DF017A2A6167EF007C04BD /* Koinz Task.app */;
@@ -353,10 +347,9 @@
 			);
 			mainGroup = 52DF01712A6167EF007C04BD;
 			packageReferences = (
-				52DF01A22A616CFF007C04BD /* XCRemoteSwiftPackageReference "Alamofire" */,
-				52DF01A52A616D0D007C04BD /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */,
 				52D300672A62A7FF002D8279 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 				52D3006F2A62A95C002D8279 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				52D300762A62BD16002D8279 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 52DF017B2A6167EF007C04BD /* Products */;
 			projectDirPath = "";
@@ -388,30 +381,29 @@
 			files = (
 				52DF01D02A61D696007C04BD /* Publisher+.swift in Sources */,
 				52DF01B72A616E95007C04BD /* NetworkState.swift in Sources */,
+				52D3007A2A62BD32002D8279 /* RequestEncodingType.swift in Sources */,
 				52DF01972A616994007C04BD /* AppCoordinator.swift in Sources */,
 				52D300662A62A563002D8279 /* HomeViewModel.swift in Sources */,
 				52DF01A92A616D2A007C04BD /* JsonEncadable.swift in Sources */,
-				52DF01AB2A616D39007C04BD /* RequestEncodingType.swift in Sources */,
 				52DF01AF2A616D8A007C04BD /* MakeRequest.swift in Sources */,
 				52DF01CA2A61D294007C04BD /* HomeViewController.swift in Sources */,
 				52DF01BD2A617066007C04BD /* Constants.swift in Sources */,
 				52D300732A62A98E002D8279 /* UIImageView+.swift in Sources */,
 				52DF01B12A616DAE007C04BD /* RequestUrl.swift in Sources */,
 				52DF01B52A616DF7007C04BD /* RequestMethod.swift in Sources */,
-				52DF01BB2A616F4D007C04BD /* AppURLRequest.swift in Sources */,
 				52D300642A629FEB002D8279 /* FlickrPictureUIModel.swift in Sources */,
 				52DF01C62A61D162007C04BD /* MoviesDataSource.swift in Sources */,
 				52DF019F2A616C56007C04BD /* HomeRepository.swift in Sources */,
 				52DF01A12A616CD4007C04BD /* NetworkRequest.swift in Sources */,
 				52DF01BF2A617238007C04BD /* PhotosListResponse.swift in Sources */,
 				52DF01AD2A616D4D007C04BD /* AppError.swift in Sources */,
+				52D300752A62BC42002D8279 /* AppURLRequest.swift in Sources */,
 				52DF01C32A61D0C0007C04BD /* HomeRepositoryImp.swift in Sources */,
 				52DF01D42A61D7BB007C04BD /* HomeResponseStorage.swift in Sources */,
 				52DF017E2A6167EF007C04BD /* AppDelegate.swift in Sources */,
 				52D3006D2A62A91C002D8279 /* ImageTableViewCell.swift in Sources */,
 				52D300602A629DA0002D8279 /* ScreenState.swift in Sources */,
 				52D300622A629F20002D8279 /* HomeImagesListUseCase.swift in Sources */,
-				52DF01B32A616DBD007C04BD /* AppRequestInterceptor.swift in Sources */,
 				52DF01CD2A61D621007C04BD /* ImageListBody.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,20 +638,12 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		52DF01A22A616CFF007C04BD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		52D300762A62BD16002D8279 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.0;
-			};
-		};
-		52DF01A52A616D0D007C04BD /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jankaltoun/AlamofireEasyLogger";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -675,15 +659,10 @@
 			package = 52D3006F2A62A95C002D8279 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
-		52DF01A32A616CFF007C04BD /* Alamofire */ = {
+		52D300772A62BD16002D8279 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 52DF01A22A616CFF007C04BD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 52D300762A62BD16002D8279 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		52DF01A62A616D0D007C04BD /* AlamofireEasyLogger */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 52DF01A52A616D0D007C04BD /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */;
-			productName = AlamofireEasyLogger;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

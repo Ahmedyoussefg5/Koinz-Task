@@ -5,7 +5,7 @@
 //  Created by Youssef on 14/07/2023.
 //
 
-import Alamofire
+import Foundation
 
 enum NetworkState<T: Codable> {
     case success(T?)
@@ -24,19 +24,6 @@ enum NetworkState<T: Codable> {
         case .success(let data):
             return data
         default: return nil
-        }
-    }
-    
-    init(_ response: DataResponse<T, AFError>) {
-        switch response.result {
-        case .success(let model):
-            self = .success(model)
-            
-        case .failure(let error):
-#if DEBUG
-            debugPrint("Model Name: \(String(describing: T.self)) has request error", error.asAFError?.errorDescription ?? "", error.localizedDescription, error.failureReason ?? "", error.localizedDescription, "With URL: ", response.request?.url?.absoluteString ?? "")
-#endif
-            self = .fail(AppNetworkError.networkError)
         }
     }
 }

@@ -14,8 +14,27 @@ class HomeViewController: UIViewController {
     
     lazy var activityIndicatorView = NVActivityIndicatorView(frame: .init(x: 0, y: 0, width: 80, height: 80), type: .ballClipRotate, color: .systemBlue, padding: .zero)
     
-    private let viewModel = HomeViewModel()
+    private let viewModel: HomeViewModel
+    
     private var bag = AppBag()
+    
+    class func create() -> UIViewController {
+        let dataSource = HomeImagesDataSourceImp(getHomeImages: ImagesListRequest())
+        let cache = HomeImageListResponseStorageImp()
+        let repo: HomeRepository = HomeRepositoryImp(dataSource: dataSource, cache: cache)
+        let useCase = HomeImagesListUseCaseImp(moviesRepository: repo)
+        let viewModel = HomeViewModel(useCase: useCase)
+        return HomeViewController(viewModel: viewModel)
+    }
+    
+    init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

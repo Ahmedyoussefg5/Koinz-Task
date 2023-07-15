@@ -44,4 +44,12 @@ enum ScreenState<T>: Equatable {
         default: return nil
         }
     }
+    
+    var error: String? {
+        switch self {
+        case .failure(let error):
+            return error
+        default: return nil
+        }
+    }
 }

@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import Alamofire
-import SwiftUI
 
 @propertyWrapper
 struct GET<T: Codable> {
@@ -22,21 +20,5 @@ struct GET<T: Codable> {
 
     init(url: RequestUrl, encoding: RequestEncodingType = .json) {
         request = NetworkRequest<T>(request: AppURLRequest(url: url, method: .get, encoding: encoding))
-    }
-}
-
-@propertyWrapper
-struct POST<T: Codable> {
-    
-    var wrappedValue: any Network<T> {
-        mutating get {
-            return request
-        }
-    }
-    
-    private var request: any Network<T>
-
-    init(url: RequestUrl, encoding: RequestEncodingType = .json) {
-        request = NetworkRequest<T>(request: AppURLRequest(url: url, method: .post, encoding: encoding))
     }
 }

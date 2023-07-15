@@ -15,15 +15,13 @@ class HomeViewModel {
     private var lastPage = 1
     private var currentPage = 0
     
+    private var bag = AppBag()
+    
     let useCase: HomeImagesListUseCase
     
     
-    init() {
-        let dataSource = HomeImagesDataSourceImp(getHomeImages: ImagesListRequest())
-        let cache = HomeImageListResponseStorageImp()
-        let repo: HomeRepository = HomeRepositoryImp(dataSource: dataSource, cache: cache)
-        useCase = HomeImagesListUseCaseImp(moviesRepository: repo)
-        
+    init(useCase: HomeImagesListUseCase) {        
+        self.useCase = useCase
     }
     
     func fetchImages() async {

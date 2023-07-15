@@ -11,8 +11,6 @@ import Combine
 
 protocol RequestReusable: Alamofire.URLRequestConvertible, AnyObject {
     var body: JsonEncadable? { get set }
-    var pathVariables: String { get set }
-    func addPathVariables(path: [String])
 }
 
 class AppURLRequest: RequestReusable {
@@ -28,14 +26,9 @@ class AppURLRequest: RequestReusable {
     private let urlReq: RequestUrl
     private let method: HTTPMethod
     private let encoding: RequestEncodingType
-    var pathVariables = ""
-    
-    func addPathVariables(path: [String]) {
-        pathVariables = path.joined(separator: "/")
-    }
     
     func asURLRequest() throws -> URLRequest {
-        let urlString = urlReq.value.appending(pathVariables).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let urlString = urlReq.value.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         let url = URL(string: urlString)!
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue

@@ -10,19 +10,13 @@ import Foundation
 protocol RequestMaker<T>: AnyObject {
     associatedtype T: Codable
     var network: any Network<T> { get }
-    func addPathVariables(path: String...) -> Self
-    func makeRequest(with body: JsonEncadable?) -> RequestPublisher<T>
+    func makeRequest(with body: JsonEncadable?) async -> NetworkState<T>
 }
 
 extension RequestMaker {
-    func makeRequest(with body: JsonEncadable? = nil) -> RequestPublisher<T> {
-        network
+    func makeRequest(with body: JsonEncadable? = nil) async -> NetworkState<T> {
+        await network
             .withBody(body)
-            .asPublisher()
-    }
-    
-    func addPathVariables(path: String...) -> Self {
-        network.request.addPathVariables(path: path)
-        return self
+            .execute()
     }
 }

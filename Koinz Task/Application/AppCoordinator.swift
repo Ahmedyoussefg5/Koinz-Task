@@ -17,7 +17,6 @@ class AppCoordinator {
     }
 
     func start() {
-        let homeVC = HomeViewController()
-        navigationController.viewControllers = [homeVC]
+        navigationController.viewControllers = [HomeViewController.create()]
     }
 }

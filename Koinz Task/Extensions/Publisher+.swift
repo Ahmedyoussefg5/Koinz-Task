@@ -8,11 +8,10 @@
 import Foundation
 import Combine
 
-//typealias AppSubject<T> = PassthroughSubject<ScreenState<T>, Never>
 typealias AppBag = Set<AnyCancellable>
 
 extension Publisher where Failure == Never {
-    func singleOutput( with bag: inout Set<AnyCancellable>) async -> Output {
+    func singleOutput(with bag: inout Set<AnyCancellable>) async -> Output {
         return await withCheckedContinuation { continuation in
             sink(receiveValue: { value in
                 continuation.resume(returning: value)

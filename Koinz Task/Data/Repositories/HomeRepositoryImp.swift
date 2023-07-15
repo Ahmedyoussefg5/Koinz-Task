@@ -25,7 +25,6 @@ class HomeRepositoryImp: HomeRepository {
         }
         
         let state = await dataSource.getHomeImages.makeRequest(with: body)
-            .singleOutput(with: &bag)
         
         if let responseData = state.data {
             cache.save(response: responseData, for: body.page)
