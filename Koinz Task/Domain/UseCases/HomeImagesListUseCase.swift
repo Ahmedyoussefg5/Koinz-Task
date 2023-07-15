@@ -22,9 +22,13 @@ class HomeImagesListUseCaseImp: HomeImagesListUseCase {
     fileprivate func handle(_ result: NetworkState<PhotosListResponse>) -> ScreenState<FlickrPictureUIModel> {
         switch result {
         case .success(let model):
-            let imageList = (model?.photos?.photo ?? []).map({ FlickrPictureModel(model: $0) })
-            let flickrPictureUIModel = FlickrPictureUIModel(currentPage: model?.photos?.page ?? 0, lastPage: model?.photos?.pages ?? 0, images: handleAddingAdImagesIn(resultArray: imageList))
-            return .success(flickrPictureUIModel)
+            if let model, model.stat == "ok" {
+                let imageList = (model.photos?.photo ?? []).map({ FlickrPictureModel(model: $0) })
+                let flickrPictureUIModel = FlickrPictureUIModel(currentPage: model.photos?.page ?? 0, lastPage: model.photos?.pages ?? 0, images: handleAddingAdImagesIn(resultArray: imageList))
+                return .success(flickrPictureUIModel)
+            } else {
+                return .failure(model?.message ?? AppNetworkError.networkError.errorAssociatedMessage)
+            }
         case .fail(let error):
             return .failure(error.errorAssociatedMessage)
         }

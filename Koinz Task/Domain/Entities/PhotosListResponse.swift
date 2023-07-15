@@ -9,8 +9,8 @@ import Foundation
 
 struct PhotosListResponse: Codable {
     let photos: FlickrPhotos?
-    #warning("check stat in usecase")
     let stat: String
+    let message: String?
 }
 
 struct FlickrPhotos: Codable {
