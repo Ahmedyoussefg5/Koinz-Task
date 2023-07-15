@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Constants {
+enum Constants {
     static var baseUrl: String {
         return "https://www.flickr.com/services/rest/"
     }

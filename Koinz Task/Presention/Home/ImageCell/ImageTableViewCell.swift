@@ -9,7 +9,7 @@ import UIKit
 
 class ImageTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var flickrImageView: UIImageView!
+    @IBOutlet private weak var flickrImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

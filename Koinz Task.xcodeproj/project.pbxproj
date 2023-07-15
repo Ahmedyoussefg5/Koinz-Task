@@ -22,6 +22,8 @@
 		52D3007C2A62C0EE002D8279 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3007B2A62C0EE002D8279 /* Array+.swift */; };
 		52D3007F2A62C242002D8279 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3007E2A62C242002D8279 /* UserDefault.swift */; };
 		52D300812A62C29A002D8279 /* UserDefaultItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300802A62C29A002D8279 /* UserDefaultItems.swift */; };
+		52D300832A62C540002D8279 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300822A62C540002D8279 /* UITableView+.swift */; };
+		52D300852A62C6C1002D8279 /* LoadingViewCapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300842A62C6C1002D8279 /* LoadingViewCapable.swift */; };
 		52DF017E2A6167EF007C04BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF017D2A6167EF007C04BD /* AppDelegate.swift */; };
 		52DF01872A6167F0007C04BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01862A6167F0007C04BD /* Assets.xcassets */; };
 		52DF018A2A6167F0007C04BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01882A6167F0007C04BD /* LaunchScreen.storyboard */; };
@@ -58,6 +60,8 @@
 		52D3007B2A62C0EE002D8279 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		52D3007E2A62C242002D8279 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		52D300802A62C29A002D8279 /* UserDefaultItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultItems.swift; sourceTree = "<group>"; };
+		52D300822A62C540002D8279 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		52D300842A62C6C1002D8279 /* LoadingViewCapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewCapable.swift; sourceTree = "<group>"; };
 		52DF017A2A6167EF007C04BD /* Koinz Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Koinz Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DF017D2A6167EF007C04BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DF01862A6167F0007C04BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				52D3005F2A629DA0002D8279 /* ScreenState.swift */,
+				52D300842A62C6C1002D8279 /* LoadingViewCapable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 				52DF01CF2A61D696007C04BD /* Publisher+.swift */,
 				52D300722A62A98D002D8279 /* UIImageView+.swift */,
 				52D3007B2A62C0EE002D8279 /* Array+.swift */,
+				52D300822A62C540002D8279 /* UITableView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 				52DF01D02A61D696007C04BD /* Publisher+.swift in Sources */,
 				52DF01B72A616E95007C04BD /* NetworkState.swift in Sources */,
 				52D3007A2A62BD32002D8279 /* RequestEncodingType.swift in Sources */,
+				52D300832A62C540002D8279 /* UITableView+.swift in Sources */,
 				52DF01972A616994007C04BD /* AppCoordinator.swift in Sources */,
 				52D3007C2A62C0EE002D8279 /* Array+.swift in Sources */,
 				52D300662A62A563002D8279 /* HomeViewModel.swift in Sources */,
@@ -419,6 +426,7 @@
 				52DF01AD2A616D4D007C04BD /* AppError.swift in Sources */,
 				52D300752A62BC42002D8279 /* AppURLRequest.swift in Sources */,
 				52DF01C32A61D0C0007C04BD /* HomeRepositoryImp.swift in Sources */,
+				52D300852A62C6C1002D8279 /* LoadingViewCapable.swift in Sources */,
 				52DF01D42A61D7BB007C04BD /* HomeResponseStorage.swift in Sources */,
 				52DF017E2A6167EF007C04BD /* AppDelegate.swift in Sources */,
 				52D3006D2A62A91C002D8279 /* ImageTableViewCell.swift in Sources */,

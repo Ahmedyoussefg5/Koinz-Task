@@ -8,11 +8,9 @@
 import UIKit
 import NVActivityIndicatorView
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, LoadingViewCapable {
     
-    @IBOutlet weak var tableView: UITableView!
-    
-    lazy var activityIndicatorView = NVActivityIndicatorView(frame: .init(x: 0, y: 0, width: 80, height: 80), type: .ballClipRotate, color: .systemBlue, padding: .zero)
+    @IBOutlet private weak var tableView: UITableView!
     
     private let viewModel: HomeViewModel
     
@@ -38,15 +36,20 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(.init(nibName: "ImageTableViewCell", bundle: .main), forCellReuseIdentifier: "ImageTableViewCell")
-        tableView.dataSource = self
-        tableView.delegate = self
+        setupTableView()
         sink()
         getImages()
     }
     
+    private func setupTableView() {
+        tableView.registerCellNib(cellClass: ImageTableViewCell.self)
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
     private func sink() {
         viewModel.$state
+            .dropFirst()
             .receive(on: DispatchQueue.main)
             .sink {[weak self] state in
                 switch state {
@@ -71,32 +74,12 @@ class HomeViewController: UIViewController {
         }
     }
     
-    func startLoading() {
-        view.addSubview(activityIndicatorView)
-        activityIndicatorView.center = view.center
-        activityIndicatorView.startAnimating()
-    }
-    
-    func stopLoading() {
-        activityIndicatorView.removeFromSuperview()
-        activityIndicatorView.stopAnimating()
-    }
-    
     func showAlert(with message: String) {
         print(message)
     }
 }
 
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.imagesList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageTableViewCell") as! ImageTableViewCell
-        cell.config(model: viewModel.imagesList[indexPath.row])
-        return cell
-    }
+extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == viewModel.imagesList.count - 3 {
@@ -104,5 +87,17 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
                 await viewModel.fetchImages()
             }
         }
+    }
+}
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.imagesList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeue(ImageTableViewCell.self)
+        cell.config(model: viewModel.imagesList[indexPath.row])
+        return cell
     }
 }
