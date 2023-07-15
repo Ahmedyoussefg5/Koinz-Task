@@ -12,5 +12,9 @@ struct Constants {
         return "https://www.flickr.com/services/rest/"
     }
     
+    static var imageBaseUrl: String {
+        return "https://live.staticflickr.com/"
+    }
+    
     static var apiKey = "3bfe94ecf8f6a5e24626379aafc7e681"
 }

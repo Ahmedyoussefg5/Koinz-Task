@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AppError: LocalizedError {
-    var validatorErrorAssociatedMessage: String { get }
+    var errorAssociatedMessage: String { get }
 }
 
 enum AppNetworkError: AppError {
@@ -17,7 +17,7 @@ enum AppNetworkError: AppError {
     case businessError(String)
     case basicError
     
-     var validatorErrorAssociatedMessage: String {
+     var errorAssociatedMessage: String {
         switch self {
         case .networkError:
             return "Network Error Message"

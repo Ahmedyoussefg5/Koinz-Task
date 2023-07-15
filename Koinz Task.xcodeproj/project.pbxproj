@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52D300602A629DA0002D8279 /* ScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3005F2A629DA0002D8279 /* ScreenState.swift */; };
+		52D300622A629F20002D8279 /* HomeImagesListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300612A629F20002D8279 /* HomeImagesListUseCase.swift */; };
+		52D300642A629FEB002D8279 /* FlickrPictureUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300632A629FEB002D8279 /* FlickrPictureUIModel.swift */; };
+		52D300662A62A563002D8279 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300652A62A563002D8279 /* HomeViewModel.swift */; };
+		52D300692A62A7FF002D8279 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 52D300682A62A7FF002D8279 /* NVActivityIndicatorView */; };
+		52D3006D2A62A91C002D8279 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3006B2A62A91C002D8279 /* ImageTableViewCell.swift */; };
+		52D3006E2A62A91C002D8279 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52D3006C2A62A91C002D8279 /* ImageTableViewCell.xib */; };
+		52D300712A62A95C002D8279 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 52D300702A62A95C002D8279 /* SDWebImage */; };
+		52D300732A62A98E002D8279 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300722A62A98D002D8279 /* UIImageView+.swift */; };
 		52DF017E2A6167EF007C04BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF017D2A6167EF007C04BD /* AppDelegate.swift */; };
 		52DF01872A6167F0007C04BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01862A6167F0007C04BD /* Assets.xcassets */; };
 		52DF018A2A6167F0007C04BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01882A6167F0007C04BD /* LaunchScreen.storyboard */; };
@@ -36,6 +45,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52D3005F2A629DA0002D8279 /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
+		52D300612A629F20002D8279 /* HomeImagesListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImagesListUseCase.swift; sourceTree = "<group>"; };
+		52D300632A629FEB002D8279 /* FlickrPictureUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPictureUIModel.swift; sourceTree = "<group>"; };
+		52D300652A62A563002D8279 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		52D3006B2A62A91C002D8279 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		52D3006C2A62A91C002D8279 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		52D300722A62A98D002D8279 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		52DF017A2A6167EF007C04BD /* Koinz Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Koinz Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DF017D2A6167EF007C04BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DF01862A6167F0007C04BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,12 +87,31 @@
 			files = (
 				52DF01A42A616CFF007C04BD /* Alamofire in Frameworks */,
 				52DF01A72A616D0D007C04BD /* AlamofireEasyLogger in Frameworks */,
+				52D300712A62A95C002D8279 /* SDWebImage in Frameworks */,
+				52D300692A62A7FF002D8279 /* NVActivityIndicatorView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52D3005E2A629D8C002D8279 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				52D3005F2A629DA0002D8279 /* ScreenState.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		52D3006A2A62A908002D8279 /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				52D3006B2A62A91C002D8279 /* ImageTableViewCell.swift */,
+				52D3006C2A62A91C002D8279 /* ImageTableViewCell.xib */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
 		52DF01712A6167EF007C04BD = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +155,7 @@
 		52DF01922A6168B0007C04BD /* Presention */ = {
 			isa = PBXGroup;
 			children = (
+				52D3005E2A629D8C002D8279 /* Utils */,
 				52DF01932A6168B7007C04BD /* Home */,
 			);
 			path = Presention;
@@ -128,8 +164,11 @@
 		52DF01932A6168B7007C04BD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				52D3006A2A62A908002D8279 /* ImageCell */,
 				52DF01C82A61D294007C04BD /* HomeViewController.swift */,
+				52D300652A62A563002D8279 /* HomeViewModel.swift */,
 				52DF01C92A61D294007C04BD /* HomeViewController.xib */,
+				52D300632A629FEB002D8279 /* FlickrPictureUIModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -199,6 +238,7 @@
 		52DF019C2A616C28007C04BD /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				52D300612A629F20002D8279 /* HomeImagesListUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -241,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				52DF01CF2A61D696007C04BD /* Publisher+.swift */,
+				52D300722A62A98D002D8279 /* UIImageView+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -280,6 +321,8 @@
 			packageProductDependencies = (
 				52DF01A32A616CFF007C04BD /* Alamofire */,
 				52DF01A62A616D0D007C04BD /* AlamofireEasyLogger */,
+				52D300682A62A7FF002D8279 /* NVActivityIndicatorView */,
+				52D300702A62A95C002D8279 /* SDWebImage */,
 			);
 			productName = "Koinz Task";
 			productReference = 52DF017A2A6167EF007C04BD /* Koinz Task.app */;
@@ -312,6 +355,8 @@
 			packageReferences = (
 				52DF01A22A616CFF007C04BD /* XCRemoteSwiftPackageReference "Alamofire" */,
 				52DF01A52A616D0D007C04BD /* XCRemoteSwiftPackageReference "AlamofireEasyLogger" */,
+				52D300672A62A7FF002D8279 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				52D3006F2A62A95C002D8279 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 52DF017B2A6167EF007C04BD /* Products */;
 			projectDirPath = "";
@@ -328,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52DF018A2A6167F0007C04BD /* LaunchScreen.storyboard in Resources */,
+				52D3006E2A62A91C002D8279 /* ImageTableViewCell.xib in Resources */,
 				52DF01872A6167F0007C04BD /* Assets.xcassets in Resources */,
 				52DF01CB2A61D294007C04BD /* HomeViewController.xib in Resources */,
 			);
@@ -343,14 +389,17 @@
 				52DF01D02A61D696007C04BD /* Publisher+.swift in Sources */,
 				52DF01B72A616E95007C04BD /* NetworkState.swift in Sources */,
 				52DF01972A616994007C04BD /* AppCoordinator.swift in Sources */,
+				52D300662A62A563002D8279 /* HomeViewModel.swift in Sources */,
 				52DF01A92A616D2A007C04BD /* JsonEncadable.swift in Sources */,
 				52DF01AB2A616D39007C04BD /* RequestEncodingType.swift in Sources */,
 				52DF01AF2A616D8A007C04BD /* MakeRequest.swift in Sources */,
 				52DF01CA2A61D294007C04BD /* HomeViewController.swift in Sources */,
 				52DF01BD2A617066007C04BD /* Constants.swift in Sources */,
+				52D300732A62A98E002D8279 /* UIImageView+.swift in Sources */,
 				52DF01B12A616DAE007C04BD /* RequestUrl.swift in Sources */,
 				52DF01B52A616DF7007C04BD /* RequestMethod.swift in Sources */,
 				52DF01BB2A616F4D007C04BD /* AppURLRequest.swift in Sources */,
+				52D300642A629FEB002D8279 /* FlickrPictureUIModel.swift in Sources */,
 				52DF01C62A61D162007C04BD /* MoviesDataSource.swift in Sources */,
 				52DF019F2A616C56007C04BD /* HomeRepository.swift in Sources */,
 				52DF01A12A616CD4007C04BD /* NetworkRequest.swift in Sources */,
@@ -359,6 +408,9 @@
 				52DF01C32A61D0C0007C04BD /* HomeRepositoryImp.swift in Sources */,
 				52DF01D42A61D7BB007C04BD /* HomeResponseStorage.swift in Sources */,
 				52DF017E2A6167EF007C04BD /* AppDelegate.swift in Sources */,
+				52D3006D2A62A91C002D8279 /* ImageTableViewCell.swift in Sources */,
+				52D300602A629DA0002D8279 /* ScreenState.swift in Sources */,
+				52D300622A629F20002D8279 /* HomeImagesListUseCase.swift in Sources */,
 				52DF01B32A616DBD007C04BD /* AppRequestInterceptor.swift in Sources */,
 				52DF01CD2A61D621007C04BD /* ImageListBody.swift in Sources */,
 			);
@@ -578,6 +630,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		52D300672A62A7FF002D8279 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		52D3006F2A62A95C002D8279 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		52DF01A22A616CFF007C04BD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -597,6 +665,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		52D300682A62A7FF002D8279 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52D300672A62A7FF002D8279 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		52D300702A62A95C002D8279 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52D3006F2A62A95C002D8279 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
 		52DF01A32A616CFF007C04BD /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 52DF01A22A616CFF007C04BD /* XCRemoteSwiftPackageReference "Alamofire" */;
