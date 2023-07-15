@@ -19,6 +19,7 @@
 		52D300752A62BC42002D8279 /* AppURLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300742A62BC42002D8279 /* AppURLRequest.swift */; };
 		52D300782A62BD16002D8279 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 52D300772A62BD16002D8279 /* Alamofire */; };
 		52D3007A2A62BD32002D8279 /* RequestEncodingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300792A62BD32002D8279 /* RequestEncodingType.swift */; };
+		52D3007C2A62C0EE002D8279 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3007B2A62C0EE002D8279 /* Array+.swift */; };
 		52DF017E2A6167EF007C04BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF017D2A6167EF007C04BD /* AppDelegate.swift */; };
 		52DF01872A6167F0007C04BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01862A6167F0007C04BD /* Assets.xcassets */; };
 		52DF018A2A6167F0007C04BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01882A6167F0007C04BD /* LaunchScreen.storyboard */; };
@@ -52,6 +53,7 @@
 		52D300722A62A98D002D8279 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		52D300742A62BC42002D8279 /* AppURLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppURLRequest.swift; sourceTree = "<group>"; };
 		52D300792A62BD32002D8279 /* RequestEncodingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestEncodingType.swift; sourceTree = "<group>"; };
+		52D3007B2A62C0EE002D8279 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		52DF017A2A6167EF007C04BD /* Koinz Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Koinz Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DF017D2A6167EF007C04BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DF01862A6167F0007C04BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,8 +164,8 @@
 			children = (
 				52D3006A2A62A908002D8279 /* ImageCell */,
 				52DF01C82A61D294007C04BD /* HomeViewController.swift */,
-				52D300652A62A563002D8279 /* HomeViewModel.swift */,
 				52DF01C92A61D294007C04BD /* HomeViewController.xib */,
+				52D300652A62A563002D8279 /* HomeViewModel.swift */,
 				52D300632A629FEB002D8279 /* FlickrPictureUIModel.swift */,
 			);
 			path = Home;
@@ -277,6 +279,7 @@
 			children = (
 				52DF01CF2A61D696007C04BD /* Publisher+.swift */,
 				52D300722A62A98D002D8279 /* UIImageView+.swift */,
+				52D3007B2A62C0EE002D8279 /* Array+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				52DF01B72A616E95007C04BD /* NetworkState.swift in Sources */,
 				52D3007A2A62BD32002D8279 /* RequestEncodingType.swift in Sources */,
 				52DF01972A616994007C04BD /* AppCoordinator.swift in Sources */,
+				52D3007C2A62C0EE002D8279 /* Array+.swift in Sources */,
 				52D300662A62A563002D8279 /* HomeViewModel.swift in Sources */,
 				52DF01A92A616D2A007C04BD /* JsonEncadable.swift in Sources */,
 				52DF01AF2A616D8A007C04BD /* MakeRequest.swift in Sources */,

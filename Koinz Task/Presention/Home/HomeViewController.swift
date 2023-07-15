@@ -98,9 +98,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if ((scrollView.contentOffset.y + scrollView.frame.size.height) > scrollView.contentSize.height) {
-            getImages()
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == viewModel.imagesList.count - 3 {
+            Task {
+                await viewModel.fetchImages()
+            }
         }
     }
 }

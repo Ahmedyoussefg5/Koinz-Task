@@ -19,22 +19,31 @@ class HomeImagesListUseCaseImp: HomeImagesListUseCase {
     
     private let moviesRepository: HomeRepository
     
-    func execute(page: Int) async -> ScreenState<FlickrPictureUIModel> {
-        
-        let result = await moviesRepository
-            .fetchImagesList(body: .init(page: page))
-        
+    fileprivate func handle(_ result: NetworkState<PhotosListResponse>) -> ScreenState<FlickrPictureUIModel> {
         switch result {
         case .success(let model):
             let imageList = (model?.photos?.photo ?? []).map({ FlickrPictureModel(model: $0) })
-            let sep = FlickrPictureModel(imageName: "youtube ad")
-            
-            let newItems = (0 ..< 5 * imageList.count - 5).map { $0 % 2 == 0 ? imageList[$0/5] : sep }
-            
-            let flickrPictureUIModel = FlickrPictureUIModel(currentPage: model?.photos?.page ?? 0, lastPage: model?.photos?.pages ?? 0, images: newItems)
+            let flickrPictureUIModel = FlickrPictureUIModel(currentPage: model?.photos?.page ?? 0, lastPage: model?.photos?.pages ?? 0, images: handleAddingAdImagesIn(resultArray: imageList))
             return .success(flickrPictureUIModel)
         case .fail(let error):
             return .failure(error.errorAssociatedMessage)
         }
+    }
+    
+    private func handleAddingAdImagesIn(resultArray: [FlickrPictureModel]) -> [FlickrPictureModel] {
+        let adImage = FlickrPictureModel(imageName: "youtube ad")
+        
+        let chunks = resultArray.chunk(into: 5)
+        
+        var newItems = Array(chunks.joined(separator: [adImage]))
+        newItems.append(adImage)
+        
+        return newItems
+    }
+    
+    func execute(page: Int) async -> ScreenState<FlickrPictureUIModel> {
+        let result = await moviesRepository
+            .fetchImagesList(body: .init(page: page))
+        return handle(result)
     }
 }
