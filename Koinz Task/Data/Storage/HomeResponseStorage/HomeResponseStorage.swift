@@ -9,15 +9,17 @@ import Foundation
 
 protocol HomeImageListResponseStorage {
     func getResponse(page: Int) -> PhotosListResponse?
-    func save(response: PhotosListResponse, for page: Int)
+    func save(response: PhotosListResponse)
 }
 
 class HomeImageListResponseStorageImp: HomeImageListResponseStorage {
     func getResponse(page: Int) -> PhotosListResponse? {
-        return nil
+        return (UserDefaults.photosList ?? []).first(where: { $0.photos?.page == page })
     }
 
-    func save(response: PhotosListResponse, for page: Int) {
-        #warning("save")
+    func save(response: PhotosListResponse) {
+        var oldValue = UserDefaults.photosList ?? []
+        oldValue.append(response)
+        UserDefaults.photosList = oldValue
     }
 }

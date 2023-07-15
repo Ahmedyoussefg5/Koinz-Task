@@ -20,6 +20,8 @@
 		52D300782A62BD16002D8279 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 52D300772A62BD16002D8279 /* Alamofire */; };
 		52D3007A2A62BD32002D8279 /* RequestEncodingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300792A62BD32002D8279 /* RequestEncodingType.swift */; };
 		52D3007C2A62C0EE002D8279 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3007B2A62C0EE002D8279 /* Array+.swift */; };
+		52D3007F2A62C242002D8279 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D3007E2A62C242002D8279 /* UserDefault.swift */; };
+		52D300812A62C29A002D8279 /* UserDefaultItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300802A62C29A002D8279 /* UserDefaultItems.swift */; };
 		52DF017E2A6167EF007C04BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF017D2A6167EF007C04BD /* AppDelegate.swift */; };
 		52DF01872A6167F0007C04BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01862A6167F0007C04BD /* Assets.xcassets */; };
 		52DF018A2A6167F0007C04BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01882A6167F0007C04BD /* LaunchScreen.storyboard */; };
@@ -54,6 +56,8 @@
 		52D300742A62BC42002D8279 /* AppURLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppURLRequest.swift; sourceTree = "<group>"; };
 		52D300792A62BD32002D8279 /* RequestEncodingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestEncodingType.swift; sourceTree = "<group>"; };
 		52D3007B2A62C0EE002D8279 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		52D3007E2A62C242002D8279 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		52D300802A62C29A002D8279 /* UserDefaultItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultItems.swift; sourceTree = "<group>"; };
 		52DF017A2A6167EF007C04BD /* Koinz Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Koinz Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DF017D2A6167EF007C04BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DF01862A6167F0007C04BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +112,15 @@
 				52D3006C2A62A91C002D8279 /* ImageTableViewCell.xib */,
 			);
 			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		52D3007D2A62C215002D8279 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				52D3007E2A62C242002D8279 /* UserDefault.swift */,
+				52D300802A62C29A002D8279 /* UserDefaultItems.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		52DF01712A6167EF007C04BD = {
@@ -211,6 +224,7 @@
 		52DF019A2A616C04007C04BD /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				52D3007D2A62C215002D8279 /* Storage */,
 				52DF019B2A616C0C007C04BD /* Network */,
 			);
 			path = Infrastructure;
@@ -390,6 +404,7 @@
 				52D300662A62A563002D8279 /* HomeViewModel.swift in Sources */,
 				52DF01A92A616D2A007C04BD /* JsonEncadable.swift in Sources */,
 				52DF01AF2A616D8A007C04BD /* MakeRequest.swift in Sources */,
+				52D3007F2A62C242002D8279 /* UserDefault.swift in Sources */,
 				52DF01CA2A61D294007C04BD /* HomeViewController.swift in Sources */,
 				52DF01BD2A617066007C04BD /* Constants.swift in Sources */,
 				52D300732A62A98E002D8279 /* UIImageView+.swift in Sources */,
@@ -400,6 +415,7 @@
 				52DF019F2A616C56007C04BD /* HomeRepository.swift in Sources */,
 				52DF01A12A616CD4007C04BD /* NetworkRequest.swift in Sources */,
 				52DF01BF2A617238007C04BD /* PhotosListResponse.swift in Sources */,
+				52D300812A62C29A002D8279 /* UserDefaultItems.swift in Sources */,
 				52DF01AD2A616D4D007C04BD /* AppError.swift in Sources */,
 				52D300752A62BC42002D8279 /* AppURLRequest.swift in Sources */,
 				52DF01C32A61D0C0007C04BD /* HomeRepositoryImp.swift in Sources */,

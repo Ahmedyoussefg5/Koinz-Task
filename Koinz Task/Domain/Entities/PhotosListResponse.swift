@@ -9,6 +9,7 @@ import Foundation
 
 struct PhotosListResponse: Codable {
     let photos: FlickrPhotos?
+    #warning("check stat in usecase")
     let stat: String
 }
 
@@ -21,5 +22,4 @@ struct FlickrPhoto: Codable {
     let id, owner, secret, server: String
     let farm: Int
     let title: String
-//    let ispublic, isfriend, isfamily: Int
 }

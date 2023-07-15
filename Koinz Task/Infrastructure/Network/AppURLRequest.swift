@@ -29,7 +29,6 @@ class AppURLRequest: RequestReusable {
     
     func asURLRequest() throws -> URLRequest {
         let urlString = urlReq.value.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        print(urlString)
         let url = URL(string: urlString)!
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
