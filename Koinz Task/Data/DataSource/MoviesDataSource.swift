@@ -11,14 +11,14 @@ protocol HomeImagesDataSource {
     var getHomeImages: any RequestMaker<PhotosListResponse> { get }
 }
 
-class ImagesListRequest: RequestMaker {
+final class ImagesListRequest: RequestMaker {
     typealias T = PhotosListResponse
 
     @GET<T>(url: .path(""), encoding: .url)
     var network: any Network<T>
 }
 
-class HomeImagesDataSourceImp: HomeImagesDataSource {
+final class HomeImagesDataSourceImp: HomeImagesDataSource {
     let getHomeImages: any RequestMaker<PhotosListResponse>
     
     init(getHomeImages: any RequestMaker<PhotosListResponse>) {

@@ -7,7 +7,7 @@
 
 import Combine
 
-class HomeRepositoryImp: HomeRepository {
+final class HomeRepositoryImp: HomeRepository {
     
     init(dataSource: HomeImagesDataSource, cache: HomeImageListResponseStorage) {
         self.dataSource = dataSource

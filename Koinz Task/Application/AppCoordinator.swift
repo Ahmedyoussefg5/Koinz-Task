@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AppCoordinator {
+final class AppCoordinator {
 
     var navigationController: UINavigationController
     
@@ -17,6 +17,6 @@ class AppCoordinator {
     }
 
     func start() {
-        navigationController.viewControllers = [HomeViewController.create()]
+        navigationController.viewControllers = [MainConfigurator.getHomeView()]
     }
 }

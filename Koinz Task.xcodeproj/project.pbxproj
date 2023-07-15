@@ -24,6 +24,7 @@
 		52D300812A62C29A002D8279 /* UserDefaultItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300802A62C29A002D8279 /* UserDefaultItems.swift */; };
 		52D300832A62C540002D8279 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300822A62C540002D8279 /* UITableView+.swift */; };
 		52D300852A62C6C1002D8279 /* LoadingViewCapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300842A62C6C1002D8279 /* LoadingViewCapable.swift */; };
+		52D300872A633A2D002D8279 /* MainConfigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D300862A633A2D002D8279 /* MainConfigrator.swift */; };
 		52DF017E2A6167EF007C04BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF017D2A6167EF007C04BD /* AppDelegate.swift */; };
 		52DF01872A6167F0007C04BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01862A6167F0007C04BD /* Assets.xcassets */; };
 		52DF018A2A6167F0007C04BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DF01882A6167F0007C04BD /* LaunchScreen.storyboard */; };
@@ -62,6 +63,7 @@
 		52D300802A62C29A002D8279 /* UserDefaultItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultItems.swift; sourceTree = "<group>"; };
 		52D300822A62C540002D8279 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		52D300842A62C6C1002D8279 /* LoadingViewCapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewCapable.swift; sourceTree = "<group>"; };
+		52D300862A633A2D002D8279 /* MainConfigrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigrator.swift; sourceTree = "<group>"; };
 		52DF017A2A6167EF007C04BD /* Koinz Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Koinz Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DF017D2A6167EF007C04BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DF01862A6167F0007C04BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		52DF01922A6168B0007C04BD /* Presention */ = {
 			isa = PBXGroup;
 			children = (
+				773D424A2A62C9DD00AA5F48 /* Configrator */,
 				52D3005E2A629D8C002D8279 /* Utils */,
 				52DF01932A6168B7007C04BD /* Home */,
 			);
@@ -320,6 +323,14 @@
 			path = HomeResponseStorage;
 			sourceTree = "<group>";
 		};
+		773D424A2A62C9DD00AA5F48 /* Configrator */ = {
+			isa = PBXGroup;
+			children = (
+				52D300862A633A2D002D8279 /* MainConfigrator.swift */,
+			);
+			path = Configrator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -420,6 +431,7 @@
 				52D300642A629FEB002D8279 /* FlickrPictureUIModel.swift in Sources */,
 				52DF01C62A61D162007C04BD /* MoviesDataSource.swift in Sources */,
 				52DF019F2A616C56007C04BD /* HomeRepository.swift in Sources */,
+				52D300872A633A2D002D8279 /* MainConfigrator.swift in Sources */,
 				52DF01A12A616CD4007C04BD /* NetworkRequest.swift in Sources */,
 				52DF01BF2A617238007C04BD /* PhotosListResponse.swift in Sources */,
 				52D300812A62C29A002D8279 /* UserDefaultItems.swift in Sources */,

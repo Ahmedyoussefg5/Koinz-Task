@@ -7,9 +7,9 @@
 
 import Foundation
 
-class HomeViewModel {
+final class HomeViewModel {
     
-    @Published var state : ScreenState<Void> = .ideal
+    @Published var state: ScreenState<Void> = .ideal
     
     var imagesList: [FlickrPictureModel] = []
     private var lastPage = 1
@@ -18,7 +18,6 @@ class HomeViewModel {
     private var bag = AppBag()
     
     let useCase: HomeImagesListUseCase
-    
     
     init(useCase: HomeImagesListUseCase) {        
         self.useCase = useCase

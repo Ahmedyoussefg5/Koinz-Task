@@ -11,15 +11,15 @@ protocol HomeImagesListUseCase {
     func execute(page: Int) async -> ScreenState<FlickrPictureUIModel>
 }
 
-class HomeImagesListUseCaseImp: HomeImagesListUseCase {
+final class HomeImagesListUseCaseImp: HomeImagesListUseCase {
+    
+    private let moviesRepository: HomeRepository
     
     init(moviesRepository: HomeRepository) {
         self.moviesRepository = moviesRepository
     }
     
-    private let moviesRepository: HomeRepository
-    
-    fileprivate func handle(_ result: NetworkState<PhotosListResponse>) -> ScreenState<FlickrPictureUIModel> {
+    private func handle(_ result: NetworkState<PhotosListResponse>) -> ScreenState<FlickrPictureUIModel> {
         switch result {
         case .success(let model):
             if let model, model.stat == "ok" {

@@ -8,22 +8,13 @@
 import UIKit
 import NVActivityIndicatorView
 
-class HomeViewController: UIViewController, LoadingViewCapable {
+final class HomeViewController: UIViewController, LoadingViewCapable {
     
     @IBOutlet private weak var tableView: UITableView!
     
     private let viewModel: HomeViewModel
     
     private var bag = AppBag()
-    
-    class func create() -> UIViewController {
-        let dataSource = HomeImagesDataSourceImp(getHomeImages: ImagesListRequest())
-        let cache = HomeImageListResponseStorageImp()
-        let repo: HomeRepository = HomeRepositoryImp(dataSource: dataSource, cache: cache)
-        let useCase = HomeImagesListUseCaseImp(moviesRepository: repo)
-        let viewModel = HomeViewModel(useCase: useCase)
-        return HomeViewController(viewModel: viewModel)
-    }
     
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel

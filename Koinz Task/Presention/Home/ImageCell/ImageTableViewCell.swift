@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageTableViewCell: UITableViewCell {
+final class ImageTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var flickrImageView: UIImageView!
     

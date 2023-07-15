@@ -12,11 +12,12 @@ protocol HomeImageListResponseStorage {
     func save(response: PhotosListResponse)
 }
 
-class HomeImageListResponseStorageImp: HomeImageListResponseStorage {
+final class HomeImageListResponseStorageImp: HomeImageListResponseStorage {
+    
     func getResponse(page: Int) -> PhotosListResponse? {
-        return (UserDefaults.photosList ?? []).first(where: { $0.photos?.page == page })
+        (UserDefaults.photosList ?? []).first(where: { $0.photos?.page == page })
     }
-
+    
     func save(response: PhotosListResponse) {
         var oldValue = UserDefaults.photosList ?? []
         oldValue.append(response)
